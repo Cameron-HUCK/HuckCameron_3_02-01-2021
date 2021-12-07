@@ -7,7 +7,6 @@ body
 a
 {
     text-decoration: none;
-    color: black;
 }
 h1
 {
@@ -23,8 +22,18 @@ h2
     border-bottom: 3px solid #99E2D0;
     width: 15%;
 }
+h3
+{
+    font-size: 18px;
+}
 p{
     font-weight: 300;
+    font-size: 15px;
+}
+a
+{
+    color: white;
+    text-decoration: none;
 }
 /* L'en-tete */
 nav
@@ -34,7 +43,7 @@ nav
 .logo-head
 {
     margin: 30px 60px 0px 0px;
-    padding-bottom: 25px;
+    padding-bottom: 20px;
 }
 
 .logo-block
@@ -54,6 +63,7 @@ nav
 {
     width: 100%;
     object-fit: cover;
+    max-height: 250px;
 }
 /* Section menu */
 section
@@ -94,8 +104,13 @@ section
     border-radius: 15px 15px 15px 15px;
     padding: 3px 15px 3px 10px;
 }
+.compo-text
+{
+    color: black
+}
 .flex-price
 {
+    color: black;
     text-align: end;
 }
 .plat-block
