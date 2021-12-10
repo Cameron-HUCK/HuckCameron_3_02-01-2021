@@ -1,0 +1,52 @@
+/* Section menu */
+section
+{
+    font-family: 'Roboto', sans-serif;
+}
+#bloc-whole
+{
+    margin-top: -50px;
+    background-color: #f7f7f7;
+    border-radius: 40px 40px 0px 0px;
+    position: relative;
+}
+.contenant
+{
+    padding: 10px;
+}
+.fa-heart:before
+{
+    font-size: x-large;
+}
+.titre-logo
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 25px;
+}
+/* Entree / Plat / Dessert */
+.compo-block
+{
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    background-color: white;
+    line-height: 6px;
+    margin-bottom: 15px;
+    border-radius: 15px 15px 15px 15px;
+    padding: 3px 15px 3px 10px;
+}
+.compo-text
+{
+    color: black
+}
+.flex-price
+{
+    color: black;
+    text-align: end;
+}
+.plat-block
+{
+    margin-top: 50px;
+}
