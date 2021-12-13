@@ -33,6 +33,10 @@ body {
   nav {
     text-align: center;
   }
+
+  .fa-arrow-left{
+    color: black;
+  }
   
   .card-head {
     width: 100%;
