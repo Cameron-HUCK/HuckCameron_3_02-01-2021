@@ -1,3 +1,57 @@
+/* taille de texte */
+h1
+{
+    font-size: 26px;
+    font-style: italic;
+    font-family: 'Shrikhand',sans-serif;
+}
+h2
+{
+    font-size: 20px;
+    color: grey;
+    font-weight: 300;
+    border-bottom: 3px solid #99E2D0;
+    width: 15%;
+}
+h3
+{
+    font-size: 18px;
+}
+p{
+    font-weight: 300;
+    font-size: 15px;
+}
+a
+{
+    color: white;
+    text-decoration: none;
+}
+/* En-tete */
+.logo-head
+{
+    margin: 30px 60px 0px 0px;
+    padding-bottom: 20px;
+}
+.logo-block
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: white;
+    box-shadow: 1px -2px 6px grey;
+}
+.fa-arrow-left:before
+{
+    font-size: 20px;
+    color: initial;
+}
+/* en dessous de l'en-tete*/
+.card-head
+{
+    width: 100%;
+    object-fit: cover;
+    max-height: 250px;
+}
 /* Section menu */
 section
 {
