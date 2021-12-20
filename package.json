@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "sass": "sass --watch sass/restaurants.scss:css/style-restaurant.css --style compressed",
-    "sassfinal": "sass --watch sass/home.scss:css/style-home.css --style compressed"
+    "sassfinal": "sass --watch sass/home.scss:css/style-home.css sass/restaurants.scss:css/style-restaurant.css --style compressed"
   },
   "author": "",
   "license": "ISC"
