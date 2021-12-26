@@ -127,6 +127,15 @@ section
     background-color:#fff;
     box-shadow:10px 2px 10px #e5e5e5;
     color: black;
+    transform: scale(1);
+    transition-duration: 500ms;
+    &:hover{
+        transform: scale(1.005);
+    }
+    &:active{
+        box-shadow:2px 2px 5px 5px #e1e1e1;
+
+    }
 }
 .flex-titre
 {
