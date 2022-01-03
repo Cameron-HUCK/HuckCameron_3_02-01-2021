@@ -26,6 +26,32 @@ a
     color: white;
     text-decoration: none;
 }
+/*Loader*/
+.show-box
+{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+.loader
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+    border: 15px solid #FF79DA;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+@keyframes loader {
+    0%{
+        transform: scaleX(0);
+    }
+    100% {
+        transform: scaleX(1);
+    }
+}
+}
 /* En-tete */
 .logo-head
 {
@@ -131,10 +157,8 @@ section
     transition-duration: 500ms;
     &:hover{
         transform: scale(1.005);
-    }
-    &:active{
-        box-shadow:2px 2px 5px 5px #e1e1e1;
-
+        transition-duration: 300ms;
+        box-shadow:-2px -1px 10px #bfbfbf;
     }
 }
 .flex-titre
