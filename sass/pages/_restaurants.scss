@@ -80,7 +80,7 @@ section
     padding-right: 25px;
 }
 /* Entree / Plat / Dessert */
-.compo-block
+.compo-block:nth-child(1)
 {
     display: flex;
     align-items: end;
@@ -90,6 +90,36 @@ section
     margin-bottom: 15px;
     border-radius: 15px 15px 15px 15px;
     padding: 3px 15px 3px 10px;
+    animation-name: animation-menu;
+	animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 750ms;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: both;
+    animation-play-state: running;
+
+.compo-block:nth-child(2n){
+    animation-name: animation-menu;
+	animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 850ms;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: both;
+    animation-play-state: running;
+    }
+}
+@keyframes animation-menu {
+    0%{
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0%);
+        opacity: 1;
+    }
+
 }
 .compo-text
 {
