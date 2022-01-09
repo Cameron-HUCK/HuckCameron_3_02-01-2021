@@ -68,9 +68,21 @@ section
 {
     padding: 10px;
 }
-.fa-heart:before
+.fa-heart
 {
-    font-size: x-large;
+    font-size:26px;
+    color: initial;
+    cursor: pointer;
+        &:hover::before{
+        transition: color 2s ease-out;
+        font-weight: bold;
+        background: linear-gradient($color_pink,$color_purple_dark);
+        background-clip: border-box;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        opacity: 1;
+        content: "\f004";
+        }
 }
 .titre-logo
 {
@@ -79,7 +91,7 @@ section
     justify-content: space-between;
     padding-right: 25px;
 }
-/* Entree / Plat / Dessert */
+                            /* Entree / Plat / Dessert */
 .compo-block
 {
     display: flex;
@@ -91,6 +103,7 @@ section
     border-radius: 15px 15px 15px 15px;
     padding: 3px 15px 3px 10px;
 }
+/* ANIMATION PROGRESSIF*/
 .entrée-block a:nth-of-type(1) .compo-block{
     animation-name: animation-menu;
 	animation-duration: 1s;
@@ -204,14 +217,36 @@ section
     }
 
 }
+/* Animation BLOC VERT */
+
 .compo-text
 {
-    color: black
+    text-overflow: ellipsis;
+    color: black;
 }
 .flex-price
 {
     color: black;
     text-align: end;
+    height: 100%;
+        &:hover{
+            animation-name: animation-price;
+            animation-duration: 1s;
+            animation-timing-function: ease-in-out;
+            animation-delay: 0ms;
+            animation-iteration-count: 1;
+            animation-direction: normal;
+            animation-fill-mode: both;
+            animation-play-state: running;
+        }
+}
+@keyframes animation-price{
+    0%{
+        transform: translateX(0%);
+    }
+    100%{
+        transform: translateX(-200%);
+    }
 }
 .plat-block
 {
