@@ -74,15 +74,31 @@ section
     color: initial;
     cursor: pointer;
         &:hover::before{
-        transition: color 2s ease-out;
+        animation-name: animation-heart;
+        animation-duration: 500ms;
+        animation-timing-function: ease-in-out;
+        animation-delay: 0ms;
+        animation-iteration-count: 1;
+        animation-direction: normal;
+        animation-fill-mode: both;
+        animation-play-state: running;
         font-weight: bold;
+        }
+}
+@keyframes animation-heart
+{
+    0% {
+        opacity: 0.1;
+        color: initial;
+    }
+    100% {
         background: linear-gradient($color_pink,$color_purple_dark);
         background-clip: border-box;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         opacity: 1;
         content: "\f004";
-        }
+    }
 }
 .titre-logo
 {

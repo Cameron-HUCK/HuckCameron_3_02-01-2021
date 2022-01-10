@@ -226,16 +226,33 @@ section
 {
     font-size:26px;
     color: initial;
-    transition: color 2s ease-out;
     cursor: pointer;
         &:hover::before{
+        animation-name: animation-heart;
+        animation-duration: 500ms;
+        animation-timing-function: ease-in-out;
+        animation-delay: 0ms;
+        animation-iteration-count: 1;
+        animation-direction: normal;
+        animation-fill-mode: both;
+        animation-play-state: running;
         font-weight: bold;
+        }
+}
+@keyframes animation-heart
+{
+    0% {
+        opacity: 0.1;
+        color: initial;
+    }
+    100% {
         background: linear-gradient($color_pink,$color_purple_dark);
         background-clip: border-box;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         opacity: 1;
         content: "\f004";
+    }
 }
 .new-bloc
 {
@@ -247,5 +264,4 @@ section
     color:green;
     border-radius:5px;
     padding:7px;
-}
 }
