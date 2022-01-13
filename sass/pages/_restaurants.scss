@@ -117,7 +117,7 @@ section
 .compo-block
 {
     display: flex;
-    align-items: end;
+    align-items: center;
     justify-content: space-between;
     background-color: white;
     line-height: 6px;
@@ -126,107 +126,26 @@ section
     padding: 3px 15px 3px 10px;
 }
 /* ANIMATION PROGRESSIF*/
-.entrée-block a:nth-of-type(1) .compo-block{
+.anim-prog a .compo-block{
     animation-name: animation-menu;
 	animation-duration: 1s;
     animation-timing-function: ease-in-out;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: both;
+    animation-play-state: running;
+}
+.anim-prog a:nth-of-type(1) .compo-block{
     animation-delay: 750ms;
-    animation-iteration-count: 1;
-    animation-direction: normal;
-    animation-fill-mode: both;
-    animation-play-state: running;
 }
-.entrée-block a:nth-of-type(2) .compo-block{
-    animation-name: animation-menu;
-	animation-duration: 1s;
-    animation-timing-function: ease-in-out;
-    animation-delay: 850ms;
-    animation-iteration-count: 1;
-    animation-direction: normal;
-    animation-fill-mode: both;
-    animation-play-state: running;
+.anim-prog a:nth-of-type(2) .compo-block{
+    animation-delay: 1000ms;
 }
-.entrée-block a:nth-of-type(3) .compo-block{
-    animation-name: animation-menu;
-	animation-duration: 1s;
-    animation-timing-function: ease-in-out;
-    animation-delay: 950ms;
-    animation-iteration-count: 1;
-    animation-direction: normal;
-    animation-fill-mode: both;
-    animation-play-state: running;
+.anim-prog a:nth-of-type(3) .compo-block{
+    animation-delay: 1250ms;
 }
-.entrée-block a:nth-of-type(4) .compo-block{
-    animation-name: animation-menu;
-	animation-duration: 1s;
-    animation-timing-function: ease-in-out;
-    animation-delay: 1050ms;
-    animation-iteration-count: 1;
-    animation-direction: normal;
-    animation-fill-mode: both;
-    animation-play-state: running;
-}
-/*plat*/
-.plat-block a:nth-of-type(1) .compo-block{
-    animation-name: animation-menu;
-	animation-duration: 1s;
-    animation-timing-function: ease-in-out;
-    animation-delay: 750ms;
-    animation-iteration-count: 1;
-    animation-direction: normal;
-    animation-fill-mode: both;
-    animation-play-state: running;
-}
-.plat-block a:nth-of-type(2) .compo-block{
-    animation-name: animation-menu;
-	animation-duration: 1s;
-    animation-timing-function: ease-in-out;
-    animation-delay: 850ms;
-    animation-iteration-count: 1;
-    animation-direction: normal;
-    animation-fill-mode: both;
-    animation-play-state: running;
-}
-.plat-block a:nth-of-type(3) .compo-block{
-    animation-name: animation-menu;
-	animation-duration: 1s;
-    animation-timing-function: ease-in-out;
-    animation-delay: 950ms;
-    animation-iteration-count: 1;
-    animation-direction: normal;
-    animation-fill-mode: both;
-    animation-play-state: running;
-}
-/* Dessert */
-.dessert-block a:nth-of-type(1) .compo-block{
-    animation-name: animation-menu;
-	animation-duration: 1s;
-    animation-timing-function: ease-in-out;
-    animation-delay: 750ms;
-    animation-iteration-count: 1;
-    animation-direction: normal;
-    animation-fill-mode: both;
-    animation-play-state: running;
-}
-.dessert-block a:nth-of-type(2) .compo-block{
-    animation-name: animation-menu;
-	animation-duration: 1s;
-    animation-timing-function: ease-in-out;
-    animation-delay: 850ms;
-    animation-iteration-count: 1;
-    animation-direction: normal;
-    animation-fill-mode: both;
-    animation-play-state: running;
-}
-.dessert-block a:nth-of-type(3) .compo-block{
-    animation-name: animation-menu;
-	animation-duration: 1s;
-    animation-timing-function: ease-in-out;
-    animation-delay: 950ms;
-    animation-iteration-count: 1;
-    animation-direction: normal;
-    animation-fill-mode: both;
-    animation-play-state: running;
+.anim-prog a:nth-of-type(4) .compo-block{
+    animation-delay: 1500ms;
 }
 @keyframes animation-menu {
     0%{
@@ -244,18 +163,22 @@ section
 .compo-text
 {
     text-overflow: ellipsis;
+    width: 90%;
     color: black;
 }
 .flex-price
 {
     color: black;
     text-align: end;
-    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
         &:hover{
             animation-name: animation-price;
-            animation-duration: 1s;
+            animation-duration: 500ms;
             animation-timing-function: ease-in-out;
-            animation-delay: 0ms;
+            animation-delay: 0s;
             animation-iteration-count: 1;
             animation-direction: normal;
             animation-fill-mode: both;
@@ -265,9 +188,42 @@ section
 @keyframes animation-price{
     0%{
         transform: translateX(0%);
+        
     }
     100%{
-        transform: translateX(-200%);
+        transform: translateX(-145%);
+    }
+}
+
+.anim-green
+{
+    height: 69px;
+    width: 4rem;
+    background-color: #99e2d0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    position: absolute;
+    left: 100%;
+    border-radius: 0px 15px 15px 0;
+        &:hover .anim-circle{
+        animation-name: animation-circle;
+        animation-duration: 500ms;
+        animation-timing-function: ease-in-out;
+        animation-delay: 0ms;
+        animation-iteration-count: 1;
+        animation-direction: normal;
+        animation-fill-mode: both;
+        animation-play-state: running;
+        }
+}
+@keyframes animation-circle{
+    0% {
+        transform: rotate(180deg);
+    }
+    100% {
+        transform: rotate(720deg);
     }
 }
 .plat-block
