@@ -171,9 +171,10 @@ section
     color: black;
     text-align: end;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     height: 60px;
+    width: 30px;
         &:hover{
             animation-name: animation-price;
             animation-duration: 500ms;
@@ -197,7 +198,7 @@ section
         display: flex;
     }
     100%{
-        transform: translateX(-145%);
+        transform: translateX(-215%);
     }
 }
 
@@ -205,6 +206,7 @@ section
 {
     height: 69px;
     width: 4rem;
+    margin-left: 15px;
     background-color: #99e2d0;
     display: none;
     justify-content: center;
