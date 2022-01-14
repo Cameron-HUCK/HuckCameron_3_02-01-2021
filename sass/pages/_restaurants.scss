@@ -183,12 +183,18 @@ section
             animation-direction: normal;
             animation-fill-mode: both;
             animation-play-state: running;
+            .anim-green{
+            display: flex;
+            }
         }
 }
 @keyframes animation-price{
     0%{
         transform: translateX(0%);
-        
+    }
+    50%{
+        transform: translateX(-70%);
+        display: flex;
     }
     100%{
         transform: translateX(-145%);
@@ -200,12 +206,13 @@ section
     height: 69px;
     width: 4rem;
     background-color: #99e2d0;
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
     color: white;
     position: absolute;
     left: 100%;
+    float: right;
     border-radius: 0px 15px 15px 0;
         &:hover .anim-circle{
         animation-name: animation-circle;
