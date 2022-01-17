@@ -20,6 +20,8 @@ h3
 p{
     font-weight: 300;
     font-size: 15px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 a
 {
@@ -123,7 +125,7 @@ section
     line-height: 6px;
     margin-bottom: 15px;
     border-radius: 15px 15px 15px 15px;
-    padding: 3px 15px 3px 10px;
+    padding: 0px 0px 0px 5px;
 }
 /* ANIMATION PROGRESSIF*/
 .anim-prog a .compo-block{
@@ -162,8 +164,6 @@ section
 
 .compo-text
 {
-    text-overflow: ellipsis;
-    width: 90%;
     color: black;
 }
 .flex-price
@@ -173,68 +173,50 @@ section
     display: flex;
     justify-content: space-around;
     align-items: center;
+    margin-right: 10px;
     height: 60px;
-    width: 30px;
-        &:hover{
-            animation-name: animation-price;
-            animation-duration: 500ms;
-            animation-timing-function: ease-in-out;
-            animation-delay: 0s;
-            animation-iteration-count: 1;
-            animation-direction: normal;
-            animation-fill-mode: both;
-            animation-play-state: running;
-            .anim-green{
-            display: flex;
-            }
-        }
+    position: relative;
+    top: 15px;
 }
-@keyframes animation-price{
-    0%{
-        transform: translateX(0%);
-    }
-    50%{
-        transform: translateX(-70%);
-        display: flex;
-    }
-    100%{
-        transform: translateX(-215%);
-    }
-}
-
 .anim-green
 {
-    height: 69px;
-    width: 4rem;
-    margin-left: 15px;
+    height: 63px;
+    width: 0;
+    box-sizing: border-box;
     background-color: #99e2d0;
-    display: none;
+    display: flex;
     justify-content: center;
     align-items: center;
     color: white;
+    border-radius: 0px 15px 15px 0;
     position: absolute;
     left: 100%;
-    float: right;
-    border-radius: 0px 15px 15px 0;
-        &:hover .anim-circle{
-        animation-name: animation-circle;
-        animation-duration: 500ms;
-        animation-timing-function: ease-in-out;
-        animation-delay: 0ms;
-        animation-iteration-count: 1;
-        animation-direction: normal;
-        animation-fill-mode: both;
-        animation-play-state: running;
+        .anim-circle{
+            opacity: 0;
+            transform: rotate(0deg);
+            transition-property: transform;
+            transition-duration: 500ms;
+            font-size: larger;
         }
 }
-@keyframes animation-circle{
-    0% {
-        transform: rotate(180deg);
-    }
-    100% {
-        transform: rotate(720deg);
-    }
+.anim-slide{
+    display: flex;
+    align-items: center;
+    transform: translateX(0%);
+    transition-property: transform;
+    transition-duration: 500ms;
+        &:hover{
+            transform: translateX(-165%);
+            .anim-green{
+                width: 4rem;
+                .anim-circle{
+                    transform: rotate(360deg);
+                    opacity: 1;
+                }
+            }
+        }
 }
+
 .plat-block
 {
     margin-top: 50px;
