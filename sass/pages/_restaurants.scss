@@ -164,24 +164,24 @@ section
 
 .compo-text
 {
+    min-width: 0;
     color: black;
 }
 .flex-price
 {
     color: black;
     text-align: end;
-    display: flex;
     justify-content: space-around;
     align-items: center;
     margin-right: 10px;
-    height: 60px;
+    height: 30px;
     position: relative;
-    top: 15px;
+    top: 10px;
 }
 .anim-green
 {
     height: 63px;
-    width: 0;
+    width: 0px;
     box-sizing: border-box;
     background-color: #99e2d0;
     display: flex;
@@ -208,7 +208,7 @@ section
         &:hover{
             transform: translateX(-165%);
             .anim-green{
-                width: 4rem;
+                width: 62px;
                 .anim-circle{
                     transform: rotate(360deg);
                     opacity: 1;
