@@ -16,12 +16,12 @@ h2
 h3
 {
     font-size: 18px;
+    margin: 0;
 }
 p{
     font-weight: 300;
     font-size: 15px;
-    text-overflow: ellipsis;
-    white-space: nowrap;
+    margin: 0;
 }
 a
 {
@@ -122,10 +122,22 @@ section
     align-items: center;
     justify-content: space-between;
     background-color: white;
-    line-height: 6px;
     margin-bottom: 15px;
     border-radius: 15px 15px 15px 15px;
     padding: 0px 0px 0px 5px;
+    overflow: hidden;
+    &:hover .anim-slide{
+        transform: translate(20px 10px);
+        .anim-green{
+            transition-duration: 500ms;
+            transition-property: margin-right;
+            margin-right: 0px;
+            .anim-circle{
+                transform: rotate(360deg);
+                opacity: 1;
+            }
+        }
+    }
 }
 /* ANIMATION PROGRESSIF*/
 .anim-prog a .compo-block{
@@ -164,57 +176,53 @@ section
 
 .compo-text
 {
-    min-width: 0;
-    color: black;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    line-height: 25px;
+    color: #000;
+}
+.compo-text *{
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 .flex-price
 {
-    color: black;
-    text-align: end;
-    justify-content: space-around;
-    align-items: center;
-    margin-right: 10px;
-    height: 30px;
-    position: relative;
-    top: 10px;
+    color:#000;
+    text-align:end;
+    justify-content:space-around;
+    align-items:center;
+    margin: 33px 10px 0px 2px;
+    height:30px;
 }
-.anim-green
-{
-    height: 63px;
-    width: 0px;
-    box-sizing: border-box;
-    background-color: #99e2d0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    border-radius: 0px 15px 15px 0;
-    position: absolute;
-    left: 100%;
+.anim-green{
+    height:63px;
+    width:62px;
+    box-sizing:border-box;
+    background-color:#99e2d0;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:#fff;
+    border-radius:0px 15px 15px 0;
+    margin-right: -62px;
         .anim-circle{
             opacity: 0;
             transform: rotate(0deg);
-            transition-property: transform;
-            transition-duration: 500ms;
+            transition-property: transform opacity;
+            transition-duration: 600ms;
+            transition-delay: 100ms;
             font-size: larger;
         }
 }
 .anim-slide{
     display: flex;
     align-items: center;
-    transform: translateX(0%);
+    transform: translate(0px);
     transition-property: transform;
     transition-duration: 500ms;
-        &:hover{
-            transform: translateX(-165%);
-            .anim-green{
-                width: 62px;
-                .anim-circle{
-                    transform: rotate(360deg);
-                    opacity: 1;
-                }
-            }
-        }
+
 }
 
 .plat-block
