@@ -24,11 +24,13 @@ footer {
     align-items: center;
     height: 25px;
   }
-  
   .line-espace {
     line-height: 25px;
   }
-  
+  .line-espace-home{
+    margin-top: -7px;
+    line-height: 8px;
+  }
   .fa-utensils:before {
     margin-left: 6px;
   }

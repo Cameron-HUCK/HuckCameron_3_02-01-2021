@@ -1,23 +1,23 @@
 /*Taille de texte */
 p
 {
-    font-size:18px;
+    font-size:15px;
     width:100%;
     font-weight:200;
 }
 h1{
-    font-size:24px;
+    font-size:26px;
     margin:0px;
     padding:20px 40px 0px 40px;
     color: black;
 }
 h2
 {
-    font-size:22px;
+    font-size:20px;
 }
 h3
 {
-    font-size:20px;
+    font-size:18px;
     margin:2px;
     color: black;
 }
@@ -40,9 +40,9 @@ a
     align-items: center;
     justify-content: center;
     animation-name: animation-back;
-    animation-duration: 3000ms;
+    animation-duration: 2000ms;
     animation-timing-function: ease-in-out;
-	animation-delay: 2000ms;
+	animation-delay: 1000ms;
 	animation-iteration-count: 1;
 	animation-direction: normal;
 	animation-fill-mode: both;
@@ -72,7 +72,7 @@ a
     width: 120px;
     height: 120px;
     animation-name: animation-loader;
-	animation-duration: 3000ms;
+	animation-duration: 2000ms;
 	animation-timing-function: ease-in-out;
 	animation-delay: 0ms;
 	animation-iteration-count: 1;
@@ -169,7 +169,7 @@ section
 }
 .fa-mobile-alt:before
 {
-    padding-right: 20px;
+    padding-right: 8px;
     font-size: 24px;
 }
 .fa-mobile-alt,.fa-list-ul,.fa-store
