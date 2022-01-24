@@ -4,15 +4,15 @@ button
     background: linear-gradient($color_pink, $color_purple);
     border: none;
     cursor: pointer;
-    font-size: 20px;
     padding: 20px 60px 20px 60px;
     color: white;
     font-size: 18px;
     transform: scale(1);
     transition-duration: 500ms;
+    
     &:hover, &:active{
         transform: scale(1.1);
-        box-shadow: -2px -1px 3px $color_pink-lighter,1px 1px 3px $color_purple-lighter;
+        box-shadow: 0px -1px 3px $color_pink-lighter,5px 3px 5px $color_purple-lighter;
         background: linear-gradient($color_pink_lighter, $color_purple_lighter);
     }
 }

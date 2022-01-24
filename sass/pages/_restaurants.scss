@@ -31,25 +31,10 @@ a
 /* En-tete */
 .logo-head
 {
-    margin: 30px 60px 0px 0px;
+    margin: 30px 0px 0px;
     padding-bottom: 20px;
 }
 .logo-block
-{
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    background-color: white;
-    box-shadow: 1px -2px 6px grey;
-}
-.fa-arrow-left:before
-{
-    font-size: 20px;
-    color: initial;
-}
-@media screen and (max-width: 769px)
-{
-    .logo-block
 {
     display: flex;
     align-items: center;
@@ -57,17 +42,13 @@ a
     background-color: white;
     box-shadow: 1px -2px 6px grey;
 }
-    .logo-head
-    {
-        margin: 30px 0px 0px;
-        padding-bottom: 20px;
-    }
-    .fa-arrow-left:before
-    {
-        position: relative;
-        top: 1px;
-        right: 50px;
-    }
+.fa-arrow-left:before
+{
+    font-size: 20px;
+    color: initial;
+    position: relative;
+    top: 1px;
+    right: 50px;
 }
 /* en dessous de l'en-tete*/
 .card-head
@@ -97,7 +78,7 @@ section
     font-size:26px;
     color: initial;
     cursor: pointer;
-        &:hover::before{
+        &:hover:before, &:active, &:focus{
         animation-name: animation-heart;
         animation-duration: 1200ms;
         animation-timing-function: ease-in-out;
@@ -137,6 +118,10 @@ section
     justify-content: space-between;
     padding-right: 25px;
 }
+.menu-block
+{
+    padding-top: 10px;
+}
                             /* Entree / Plat / Dessert */
 .compo-block
 {
@@ -148,7 +133,7 @@ section
     border-radius: 15px 15px 15px 15px;
     padding: 0px 0px 0px 5px;
     overflow: hidden;
-    &:hover .anim-slide{
+    &:hover, &:active .anim-slide{
         transform: translate(20px 10px);
         .anim-green{
             transition-duration: 500ms;
@@ -244,9 +229,4 @@ section
     transition-property: transform;
     transition-duration: 500ms;
 
-}
-
-.plat-block
-{
-    margin-top: 50px;
 }
