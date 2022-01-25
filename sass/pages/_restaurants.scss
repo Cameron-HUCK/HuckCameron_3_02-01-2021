@@ -134,7 +134,7 @@ section
     padding: 0px 0px 0px 5px;
     overflow: hidden;
     &:hover, &:active .anim-slide{
-        transform: translate(20px 10px);
+        transform: translate(20px);
         .anim-green{
             transition-duration: 500ms;
             transition-property: margin-right;

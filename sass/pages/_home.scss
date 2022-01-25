@@ -1,4 +1,7 @@
-/*Taille de texte */
+/*Taille de texte  et police*/
+main{
+    font-family: "Roboto";
+}
 p
 {
     font-size:15px;
@@ -19,7 +22,6 @@ h3
 {
     font-size:18px;
     margin:2px;
-    color: black;
 }
 a
 {
@@ -115,18 +117,19 @@ a
 }
 .block-map-text
 {
-    font-family: "Shrikhand";
     background-color: #e5e5e5;
-    padding: 20px 0px 20px 0px;
+    padding: 15px 0px 15px 0px;
     box-shadow: inset 0em 0.125em rgb(128 128 128 / 15%);
 }
-span
+input
 {
-    color: grey;  
-}
-.fa-map-marker-alt:before
-{
-    padding-right: 20px;
+    color: grey;
+    border: none;
+    font-weight: bold;
+    background-color: transparent;
+    font-size: 16px;
+    text-align: center;
+    width: 160px;
 }
 /* En dessous de l'en-tete */
 header

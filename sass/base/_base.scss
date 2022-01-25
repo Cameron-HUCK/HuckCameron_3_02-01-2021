@@ -2,3 +2,15 @@ body
 {
     margin: 0;
 }
+@media screen and (min-width: 768px)
+{
+    body{
+        background-color: #f0f0f0;
+    }
+    main, .show-box{
+        max-width: 1180px;
+        margin: 0 auto;
+        overflow: hidden;
+        border: 2px solid #ddd;
+    }     
+}
